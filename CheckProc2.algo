@@ -1,0 +1,26 @@
+FUNCTION dot_function(var v1,v2:ARRAY_of INTEGER[] ) : INTEGER
+VAR
+    i,j:INTEGER;
+    ps:=0 : INTEGER;
+BEGIN
+    FOR i FROM 0 TO v1.length-1 DO
+    FOR j FROM 0 TO v2.length-1  DO
+    ps:=v1[i]*v2[j];
+    END_FOR
+    END_FOR
+    RETURN ps ;  
+END
+
+
+
+
+ALGORITHM CHECKPROC2
+VAR
+  t1:ARRAY_of INTEGER[n];
+  t2:ARRAY_of INTEGER[n];
+BEGIN
+    pss := dot_function(t1,t2);
+    IF (pss=0) THEN
+        write("vecteur orthogonaux")
+    END_IF
+END
